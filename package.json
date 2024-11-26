@@ -1,0 +1,16 @@
+{
+  "name": "vlang",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "dev": "k6 run ./src/k6.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "k6": "^0.0.0"
+  }
+}
