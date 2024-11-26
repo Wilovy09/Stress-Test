@@ -1,6 +1,15 @@
 import http from "k6/http";
 import { check } from "k6";
 
+function randomString(length) {
+  const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  let result = "";
+  for (let i = 0; i < length; i++) {
+    result += charset.charAt(Math.floor(Math.random() * charset.length));
+  }
+  return result;
+}
+
 export const options = {
   stages: [
     { duration: "1m", target: 1000 },
@@ -12,7 +21,11 @@ export const options = {
 
 export default function () {
   const url = "http://localhost:8080/login";
-  const payload = JSON.stringify({ username: "Test", password: "MyAwesomePassword1234." });
+
+  const username = `${randomString(8)}`;
+  const password = `${randomString(12)}`;
+
+  const payload = JSON.stringify({ username, password });
 
   const params = {
     headers: {

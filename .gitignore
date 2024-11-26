@@ -1,2 +1,4 @@
 node_modules/
 src/rust/target/
+src/go/src/test
+src/vlang/src/main
