@@ -1,5 +1,10 @@
 # Stress tests
 
+## Specs del PC utilizado
+
+- i5-4210U (4) @ 2.70GHz
+- 8GB de RAM
+
 ## Test general
 
 ```js
